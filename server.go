@@ -37,13 +37,13 @@ func (server *Server) handleConnection(conn net.Conn){
 
 	// 创建redis单机连接
 	//redis://d1Iuw3qlDBntyx1w@10.100.150.31:6011
-	rc, _ := net.Dial("tcp", "10.100.150.31:6011")
+	rc, _ := net.Dial("tcp", "xxxx")
 	rConn := &redisConn{
 		conn: rc,
 		server: server,
 		br: bufio.NewReader(rc),
 		bw: bufio.NewWriter(rc),
-		password: "d1Iuw3qlDBntyx1w",
+		password: "xxxx",
 	}
 	// 兼容单机模式加密
 	rConn.SendBytes(utils.auth(rConn.password))

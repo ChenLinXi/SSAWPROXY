@@ -5,7 +5,7 @@ import (
 	"log"
 )
 
-const address  = "10.101.20.69:9999"
+const address  = "xxxx"
 
 func New(address string) *Server{
 	log.Println("Creating server with address", address)
